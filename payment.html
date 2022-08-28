@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Vendraw Sneakers</title>
+    <link rel="stylesheet" href="payment_style.css" type="text/CSS" />
+    <link rel="icon" href="Images/logo_icon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Cinzel"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Cinzel Decorative"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Comfortaa"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin Sans"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <script
+      src="https://kit.fontawesome.com/cacf29784e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section class="titlebar">
+      <img src="Images/logo.png" alt="Logo" />
+      <section class="titlebar_sub">
+        <a href="index.html" target="_blank"> <h4>Home</h4> </a>
+        <a href="about.html" target="_blank"> <h4>About</h4> </a>
+        <a href="shop_men.html" target="_blank"> <h4>Shop</h4> </a>
+        <a href="#" target="_blank"> <h4>Contact</h4> </a>
+      </section>
+    </section>
+
+    <div class="heading">
+      <h1>Payment Method</h1>
+    </div>
+
+    <div class="tab_nav">
+      <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'cash')">
+          CASH ON DELIVERY
+        </button>
+        <button class="tablinks" onclick="openCity(event, 'card')">
+          CREDIT/DEBIT CARD
+        </button>
+        <button class="tablinks" onclick="openCity(event, 'online')">
+          NET BANKING
+        </button>
+      </div>
+
+      <div id="cash" class="tabcontent">
+        <h3>CASH ON DELIVERY</h3>
+        <form action="thankyou.html">
+          <input type="checkbox" required />
+          <p>
+            Pay With Cash (We also accept Credit/Debit card on delivery. Please
+            Check with the delivery agent.)
+          </p>
+          <label for="adr">Shipping Address</label><br />
+          <input
+            type="text"
+            placeholder="Broome St, NY 10002, California, USA"
+            id="adr"
+            required
+          /><br />
+          <input type="submit" value="FINISH" id="submit" />
+        </form>
+      </div>
+
+      <div id="card" class="tabcontent">
+        <h3>CREDIT/DEBIT CARD</h3>
+        <form action="thankyou.html">
+          <label for="name" id="name"> Name on the Card </label><br />
+          <input type="text" placeholder="John Doe" id="name" required /><br />
+          <label for="number"> Card Number </label><br />
+          <input
+            type="text"
+            placeholder="---- ---- ----"
+            id="number"
+            maxlength="12"
+            required
+          /><br />
+          <label for="cvv"> CVV </label><br />
+          <input type="password" placeholder="---" id="cvv" required /><br />
+          <label for="date"> Expiration Date </label><br />
+          <input
+            type="text"
+            placeholder="MM/YY"
+            id="date"
+            maxlength="5"
+            required
+          /><br />
+          <label for="address"> Shipping Address </label><br />
+          <input
+            type="text"
+            placeholder="Broome St, NY 10002, California, USA"
+            id="address"
+            required
+          /><br />
+          <input type="submit" value="PAY" id="submit" />
+        </form>
+      </div>
+
+      <div id="online" class="tabcontent">
+        <h3>NET BANKING</h3>
+        <form action="thankyou.html">
+          <input
+            type="radio"
+            value="State Bank of India"
+            id="sbi"
+            name="bank"
+            required
+          />
+          <label for="sbi"> State Bank of India </label><br />
+
+          <input
+            type="radio"
+            value="ICICI Bank"
+            id="icici"
+            name="bank"
+            required
+          />
+          <label for="sbi"> ICICI Bank </label><br />
+
+          <input
+            type="radio"
+            value="Bank of Baroda"
+            id="bob"
+            name="bank"
+            required
+          />
+          <label for="sbi"> Bank of Baroda </label><br />
+
+          <input
+            type="radio"
+            value="Syndicate Bank"
+            id="sb"
+            name="bank"
+            required
+          />
+          <label for="sbi"> Syndicate Bank </label><br />
+
+          <label for="adr">Shipping Address</label><br />
+          <input
+            type="text"
+            placeholder="Broome St, NY 10002, California, USA"
+            id="adr"
+            required
+          /><br />
+
+          <input type="submit" value="PAY" id="submit" />
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+  </body>
+</html>

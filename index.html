@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Vendraw Sneakers</title>
+    <link rel="stylesheet" href="index_style.css" type="text/CSS" />
+    <link rel="icon" href="Images/logo_icon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Cinzel"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Cinzel Decorative"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Comfortaa"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin Sans"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <script
+      src="https://kit.fontawesome.com/cacf29784e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="slideshow-container">
+      <section class="titlebar">
+        <img src="Images/logo.png" alt="Logo" />
+        <section class="titlebar_sub">
+          <a href="#" target="_blank"> <h4>Home</h4> </a>
+          <a href="about.html" target="_blank"> <h4>About</h4> </a>
+          <a href="shop_men.html" target="_blank"> <h4>Shop</h4> </a>
+          <a href="contact.html" target="_blank"> <h4>Contact</h4> </a>
+        </section>
+      </section>
+
+      <div class="mySlides fade">
+        <img src="Images/s1.jpg" style="width: 100%; opacity: 0.4" />
+        <div class="text">VENDRAW SNEAKERS</div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="Images/s2.jpg" style="width: 100%; opacity: 0.4" />
+        <div class="text">VENDRAW SNEAKERS</div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="Images/s3.jpg" style="width: 100%; opacity: 0.4" />
+        <div class="text">VENDRAW SNEAKERS</div>
+      </div>
+    </div>
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2500); // Change image every 2 seconds
+      }
+    </script>
+
+    <div class="img">
+      <img src="Images/s5.jpg" alt="Image" />
+    </div>
+
+    <div class="adidas">
+      <h1><font>Flat 50% Off on all VDPHANTOM Kicks!</font></h1>
+      <hr width="70%" />
+      <h3>Offer Available till 15th September</h3>
+      <a href="shop_men.html"> SHOP NOW </a>
+      <div class="image">
+        <img src="Images/s2.jpg" alt="Image" />
+      </div>
+    </div>
+
+    <div class="nike">
+      <h1><font>Up To 30% Off on all VDLEGEND Models!</font></h1>
+      <hr width="70%" />
+      <h3>Offer Available till 10th September</h3>
+      <a href="shop_men.html"> SHOP NOW </a>
+      <div class="image_nike">
+        <img src="Images/s3.jpg" alt="Image" />
+      </div>
+    </div>
+
+    <div class="puma">
+      <div class="image_puma">
+        <img src="Images/a1.jpg" alt="Image" />
+      </div>
+      <h1>
+        <font>Buy 1 Get 1 Offer on VDSPECTRE Kicks! <br />
+        Up To 25% Off for First Timers!</font>
+      </h1>
+      <hr width="70%" />
+      <h3 id="puma_offer">Offer Available till 20th September</h3>
+      <a href="shop_men.html" id="puma_button"> SHOP NOW </a>
+    </div>
+
+    <section class="contact">
+      <div class="contact_details">
+        <p>Contact Us</p>
+        <h2>
+          <i class="fa-solid fa-map-location-dot"></i> Broome St, NY 10002,
+          California, USA
+        </h2>
+        <h2><i class="fa-solid fa-phone"></i> 1234-5678-901</h2>
+        <h2><i class="fa-solid fa-envelope"></i> emailus@vendraw.com</h2>
+      </div>
+
+      <div class="social_media_links">
+        <p>Follow Us</p>
+        <div class="icons">
+          <div class="facebook">
+            <a href="https://www.facebook.com/" target="_blank">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </div>
+          <div class="twitter">
+            <a href="https://twitter.com/" target="_blank">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </div>
+          <div class="linkedin">
+            <a href="https://www.linkedin.com/" target="_blank">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
+          <div class="instagram">
+            <a href="https://www.instagram.com/?hl=en" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

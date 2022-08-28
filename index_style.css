@@ -1,0 +1,507 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0%;
+  background-color: rgb(25, 37, 55);
+  scroll-behavior: smooth;
+}
+
+/* Titlebar Style */
+.titlebar {
+  display: flex;
+  width: 100%;
+  height: 20%;
+  background-color: #00dbde;
+  background-image: -webkit-linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+  background-image: -moz-linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+  background-image: -o-linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+  background-image: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+
+.titlebar img {
+  width: 15vw;
+  margin-left: 5%;
+  float: left;
+}
+
+.titlebar a:link {
+  text-decoration: none;
+  color: white;
+}
+
+.titlebar a:active {
+  text-decoration: none;
+  color: white;
+}
+
+.titlebar a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.titlebar a {
+  background-image: linear-gradient(
+    to right,
+    #e9e9e9,
+    #e9e9e9 50%,
+    #1a1a1a 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 1% 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.6s ease-in-out;
+  font-size: larger;
+  font-family: "cinzel";
+}
+
+.titlebar a:before {
+  content: "";
+  background: #98ffe5;
+  display: block;
+  position: absolute;
+  bottom: 35%;
+  left: 0%;
+  width: 0%;
+  height: 3px;
+  transition: all 0.6s ease-in-out;
+}
+
+.titlebar a:hover {
+  background-position: 0;
+}
+
+.titlebar a:hover::before {
+  width: 100%;
+}
+
+.titlebar_sub {
+  display: flex;
+  width: 100%;
+  justify-content: right;
+  align-items: center;
+}
+
+.titlebar_sub a {
+  margin-right: 4%;
+  font-weight: 900;
+}
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin-top: 9%;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease-in-out;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+  color: cornsilk;
+  font-size: 500%;
+  position: absolute;
+  bottom: 44%;
+  width: 100%;
+  text-align: center;
+  font-family: "cinzel decorative";
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+/*End Slideshow*/
+
+/* Contact Style */
+.contact {
+  display: flex;
+  width: 100%;
+  background-color: burlywood;
+  margin-top: 8%;
+}
+
+.contact_details {
+  width: 30%;
+  margin-left: 5%;
+  margin-top: 3%;
+}
+
+.contact_details a:link {
+  color: black;
+  text-decoration: none;
+}
+
+.contact_details a:active {
+  color: black;
+  text-decoration: none;
+}
+
+.contact_details a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.contact_details p {
+  font-weight: bolder;
+  font-family: "Cinzel decorative";
+  font-size: 250%;
+  color: black;
+  margin-left: 5%;
+  margin-bottom: 20%;
+}
+
+.contact_details h2 {
+  font-size: larger;
+  margin-left: 5%;
+  margin-top: 10%;
+  font-weight: 80%;
+  font-family: "montserrat";
+}
+
+.social_media_links {
+  width: 75%;
+  margin-top: 3%;
+  margin-bottom: 7%;
+  margin-right: 0%;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  height: 45%;
+}
+
+.social_media_links p {
+  font-weight: bolder;
+  font-family: "Cinzel decorative";
+  font-size: 250%;
+  color: black;
+  margin-left: 10%;
+  margin-bottom: 10%;
+}
+
+.social_media_links a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: black;
+}
+
+.icons a i {
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background-color: white;
+  text-align: center;
+  line-height: 250%;
+  font-size: xx-large;
+  /* margin-left: 5%; */
+  border-radius: 50%;
+  display: block;
+  /* float: left; */
+  border: 3px solid white;
+  margin-bottom: 5%;
+}
+
+.facebook a:hover i {
+  background-color: #4267b2;
+  transition: all 1s ease;
+  transform: rotateY(360deg);
+  color: white;
+}
+
+.twitter a:hover i {
+  background-color: #1da1f2;
+  transition: all 1s ease;
+  transform: rotateY(360deg);
+  color: white;
+}
+
+.instagram a:hover i {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  transition: all 1s ease;
+  transform: rotateY(360deg);
+  color: white;
+}
+
+.linkedin a:hover i {
+  background-color: #2867b2;
+  transition: all 1s ease;
+  transform: rotateY(360deg);
+  color: white;
+}
+
+/* adidas discount style */
+.img {
+  display: inline-block;
+  width: 49vw;
+  margin: 0%;
+  padding: 0%;
+}
+
+.img img {
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+
+.adidas {
+  display: inline-block;
+  width: 49vw;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(to top left, #ffff66 0%, #fb383f 100%);
+}
+
+.adidas h1 {
+  color: cornsilk;
+  font-size: xx-large;
+  font-family: "montserrat";
+  font-weight: bolder;
+  text-align: center;
+  padding-top: 4%;
+}
+
+.adidas font, .nike font, .puma font {
+  animation: animate 1.5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.adidas h3 {
+  color: cornsilk;
+  font-size: large;
+  font-family: "Cinzel";
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+.adidas a {
+  background-color: black;
+  color: white;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+  text-decoration: none;
+  font-family: "Josefin Sans";
+}
+
+.adidas a:hover,
+.nike a:hover,
+.puma a:hover {
+  font-size: larger;
+  transition: 0.2s ease-in-out;
+}
+
+.adidas a:active,
+.adidas a:visited,
+.adidas a:after {
+  background-color: black;
+  color: white;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+  text-decoration: none;
+  font-family: "Josefin Sans";
+}
+
+.image img {
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+  margin-top: 15%;
+}
+
+/*nike and puma*/
+.nike {
+  display: inline-block;
+  width: 49vw;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: top;
+  background: linear-gradient(to bottom right, #000000 0%, #7c7c7c 100%);
+}
+
+.puma {
+  display: inline-block;
+  width: 49vw;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: top;
+  background: linear-gradient(to top left, #fb383f 0%, #ffff66 100%);
+  padding-bottom: 3.5%;
+}
+
+.nike h1,
+.puma h1 {
+  color: cornsilk;
+  font-size: xx-large;
+  font-family: "montserrat";
+  font-weight: bolder;
+  text-align: center;
+}
+
+.nike h3 {
+  color: cornsilk;
+  font-size: large;
+  font-family: "Cinzel";
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 8%;
+}
+
+#puma_offer {
+  padding-bottom: 5%;
+}
+
+.nike a {
+  background-color: crimson;
+  color: white;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+  text-decoration: none;
+  font-family: "Josefin Sans";
+}
+
+.nike a:active,
+.nike a:visited,
+.nike a:after,
+.nike a:hover {
+  background-color: crimson;
+  color: white;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+  text-decoration: none;
+  font-family: "Josefin Sans";
+}
+
+.image_nike img {
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+  margin-top: 15%;
+}
+
+.puma img {
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+
+.puma h3 {
+  color: cornsilk;
+  font-size: large;
+  font-family: "Cinzel";
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.puma a {
+  background-color: black;
+  color: white;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+  text-decoration: none;
+  font-family: "Josefin Sans";
+}
+
+.puma a:active,
+.puma a:visited,
+.puma a:after,
+.puma a:hover {
+  background-color: black;
+  color: white;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+  text-decoration: none;
+  font-family: "Josefin Sans";
+}
